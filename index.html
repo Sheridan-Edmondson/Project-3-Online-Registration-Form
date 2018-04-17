@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- Written by Sheridan Edmondson -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Newsletter Signup</title>
+	  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- adjust for virtual viewport sizes on multiple device
+  sizes including smartphones  -->
+  </head>
+
+
+  <body>
+
+    <header>
+      <h1>Sheridan's Code Review</h1>
+    </header>
+
+    <main-page>
+      <!-- <div class="flex-contact"> -->
+        <form action="index.html" method="post">
+          <div class=signup-name-div>
+            <h2>Sign-up for our newsletter</h2>
+            <br>
+            <h3>Get the latest news on how your code is doing right in your inbox</h3>
+            <br>
+          </div>
+
+          <fieldset class="contact-information">
+
+            <h2>Contact Information</h2>
+            <ul class="flex-contact">
+              <li>
+                <label for="full-name">Full Name</label>
+                <input type="name" id="full-name" name="signup-name"  size="29" placeholder="required" required>
+              </li>
+
+              <li>
+                <label for="email-address">Email Address</label>
+                <input type="email" id="email-address" name="signup-email" size="29" placeholder="required" required>
+              </li>
+
+              <li>
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="signup-phone-number" placeholder="xxx-xxx-xxxx" size="29">
+              </li>
+
+              <li>
+                <label for="street-address">Street Address</label>
+                <input type="text" id="street-address" name="signup-street-address" placeholder="optional" size="29">
+              </li>
+
+              <li>
+                <label for="city">City</label>
+                <input type="text" id="city" name="signup-city" size="29">
+              </li>
+
+              <li>
+                <label for="state">State</label>
+                <select id="state" name="signup-state">
+                  <option value="" disabled selected>Choose State</option>
+                	<option value="AL">Alabama</option>
+                	<option value="AK">Alaska</option>
+                	<option value="AZ">Arizona</option>
+                	<option value="AR">Arkansas</option>
+                	<option value="CA">California</option>
+                	<option value="CO">Colorado</option>
+                	<option value="CT">Connecticut</option>
+                	<option value="DE">Delaware</option>
+                	<option value="DC">District of Columbia</option>
+                	<option value="FL">Florida</option>
+                	<option value="GA">Georgia</option>
+                	<option value="HI">Hawaii</option>
+                	<option value="ID">Idaho</option>
+                	<option value="IL">Illinois</option>
+                	<option value="IN">Indiana</option>
+                	<option value="IA">Iowa</option>
+                	<option value="KS">Kansas</option>
+                	<option value="KY">Kentucky</option>
+                	<option value="LA">Louisiana</option>
+                	<option value="ME">Maine</option>
+                	<option value="MD">Maryland</option>
+                	<option value="MA">Massachusetts</option>
+                	<option value="MI">Michigan</option>
+                	<option value="MN">Minnesota</option>
+                	<option value="MS">Mississippi</option>
+                	<option value="MO">Missouri</option>
+                	<option value="MT">Montana</option>
+                	<option value="NE">Nebraska</option>
+                	<option value="NV">Nevada</option>
+                	<option value="NH">New Hampshire</option>
+                	<option value="NJ">New Jersey</option>
+                	<option value="NM">New Mexico</option>
+                	<option value="NY">New York</option>
+                	<option value="NC">North Carolina</option>
+                	<option value="ND">North Dakota</option>
+                	<option value="OH">Ohio</option>
+                	<option value="OK">Oklahoma</option>
+                	<option value="OR">Oregon</option>
+                	<option value="PA">Pennsylvania</option>
+                	<option value="RI">Rhode Island</option>
+                	<option value="SC">South Carolina</option>
+                	<option value="SD">South Dakota</option>
+                	<option value="TN">Tennessee</option>
+                	<option value="TX">Texas</option>
+                	<option value="UT">Utah</option>
+                	<option value="VT">Vermont</option>
+                	<option value="VA">Virginia</option>
+                	<option value="WA">Washington</option>
+                	<option value="WV">West Virginia</option>
+                	<option value="WI">Wisconsin</option>
+                	<option value="WY">Wyoming</option>
+                </select><br>
+              </li>
+
+              <li>
+                <label for="zipcode">Zip Code</label>
+                <input type="text" id="zipcode" name="signup-zipcode">
+              </li>
+            </ul>  <!-- End of flex-contact  -->
+
+          </fieldset>
+
+
+
+          <fieldset class="newsletter-information">
+            <h2>Newsletter</h2>
+
+            <h4>Select the newsletters you would like to receive</h4><br>
+
+            <input type="checkbox" id="HTML-news" value="interest-html" name="signup-interest">
+            <label for="HTML-news">HTML News</label>
+            <br>
+
+            <input type="checkbox" id="CSS-news" value="interest-css" name="signup-interest">
+            <label for="CSS-news">CSS News</label>
+            <br>
+
+            <input type="checkbox" id="Javascript-news" value="interest-Javascript" name="signup-interest">
+            <label for="Javascript-news">Javascript News</label>
+            <br>
+          </fieldset>
+
+          <fieldset class="newsletter-format">
+            <h4>Newsletter format</h4>
+
+            <input type="checkbox" id="HTML-format" value="format-html" name "signup-format">
+            <label for="HTML-format">HTML</label>
+            <br>
+
+            <input type="checkbox" id="Plain-text-format" value="format-plain-text" name "signup-format">
+            <label for="Plain-text-format">Plain text</label>
+            <br>
+          </fieldset>
+
+          <fieldset class="other-topics">
+            <label for="other-topics"><h4>Other topics you'd like to hear about</h4></label>
+            <ul class="flex-other-topics">
+              <br>
+              <li>
+              <textarea id="other-topics" name="signup-other-topics" cols=30 rows=4></textarea>
+              </li>
+              <br>
+          </ul>
+          </fieldset>
+
+          <button type="submit">Sign Up</button>
+
+
+        </form>
+      <!-- </div> -->
+    </main-page>
+
+    <footer>
+      <h3>Copyright Sheridan Edmondson</h3>
+    </footer>
+
+  </body>
+
+
+
+</html>
