@@ -139,7 +139,6 @@ button {
   background-color: darkgray;
   font-size: 1.5rem;
   text-align: center;
-  font-style: bold;
   border-radius: 5px;
   width: 100%;
   border: 1px 1px 3px;
@@ -230,7 +229,7 @@ label {
 /* On a wider screen, make the label text larger and get rid of the bottom margin */
    label {
      font-size: 1.1em;
-     margin-bottom: none;
+     margin-bottom: 0px;
    }
 
 
