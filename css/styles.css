@@ -19,6 +19,8 @@ body {
   background: white;
   color: #1b6bb1;
   padding: 30px 0;
+  max-width: 768px;
+  align-items: center;
 }
 
 .container {
@@ -52,7 +54,8 @@ footer {
   min-width: 320px;
   margin: 8px auto;
   padding: 10px 16px;
-  background: ghostwhite;
+  background: white;
+
 
 }
 
@@ -61,7 +64,6 @@ header {
   justify-content: center;
   background-color: darkgray;
   color: #1b6bb1;
-  border-bottom: 2px solid darkgray;
   margin-bottom: 1px;
 
 }
@@ -70,30 +72,32 @@ header {
   to visually separate it from the main part of the form */
 
 h1 {
-    margin: 0 0 5px 0;
+    margin: 0 0 2px 0;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
   }
 
 
 .signup-name-div h2{
   text-align: center;
+  margin-bottom: 0px;
 }
-/* draw a line at the bottom of the signup box */
+
+/* draw a line at the bottom of the signup header... part of the double line */
 .signup-name-div {
   border-bottom: 3px solid gray;
 }
 
-
+/* Style the lighter text */
 h3 {
-  margin: 0 0 3px 0;
+  margin: 0 30px 10px 30px;
   text-align: center;
-  font-size: 1rem;
+  font-size: .6rem;
   color: #96cbf9;
 }
 
-h4 {
+p {
   margin: auto;
   font-size: .8rem;
   color:#96cbf9;
@@ -103,19 +107,11 @@ fieldset {
     border: none;
 }
 
-/* Create a second line at the top of the form so the design
-matches the image for the assignment. */
-.form {
-  border-top: 2px solid #66B9BF;
-  margin: 1px auto;
-}
-
 
 .contact-information,
 .newsletter-information,
 .newsletter-format,
 .other-topics {
-    /* margin: 5px 1px 0 1px; */
     margin: 5px auto;
     padding: 0 0.2em 0.75em;
 }
@@ -126,12 +122,14 @@ matches the image for the assignment. */
   border-top: 2px solid darkgray;
 }
 
+
+/* Style the header text for "contact information" and "Newsletter"  */
 h2 {
   text-align: left;
   padding-top: 1px;
   padding-left: 2px;
   padding-bottom: 4px;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 
@@ -149,7 +147,7 @@ button {
   margin-bottom: 10px;
 }
 
-/* Style the placeholder text */
+/* Style the placeholder text so that it is gray ond on the right */
 input::placeholder,
 textarea::placeholder {
   text-align: right;
@@ -166,7 +164,9 @@ textarea::placeholder {
 }
 
 
+
 /* Labels */
+
 .flex-contact li label,
 .flex-other-topics li label {
   padding: 8px;
@@ -181,6 +181,8 @@ textarea::placeholder {
 .flex-other-topics li textarea {
   padding: 20px;
   border: none;
+  background-color: ghostwhite;
+
 }
 
 label {
@@ -188,27 +190,38 @@ label {
   margin-bottom: 10px;
 }
 
+#zipcode {
+  max-width: 130px;
+}
 
 
-/* Stack the labels, (but only when the screen is narrower) */
+
+/* Make the labels and text entry boxes line up neatly in columns */
 .flex-contact > li > label,
 .flex-other-topics > li > label {
-    flex: 1 0 100px;
-    max-width: 220px;
+    flex: 1 0 250px;
+    max-width: 250px;
 }
 
-/* Put the labels next to the input boxes when the screen is wider than 320px */
+/* Stack the labels above the input boxes for a small screen, and next to them
+   when the screen is wider than 320px */
 .flex-contact > li > label + *,
 .flex-other-topics > li > label + * {
-  flex: 1 0 220px;
+  flex: 1 0 320px;
+}
+/* Put the State and Zip Code data entry boxes below the labels on smaller screens */
+
+
+
+.flex-contact state,
+.flex-contact zipcode {
+  margin-right: auto;
 }
 
-/* .flex-contact state,
-.flex-contact zipcode {
-  flex: 1 0 320px;
-} */
-
-
+#other-topics {
+  width: 100%;
+  height: 10em;
+}
 
 
 /* Media queries */
@@ -216,8 +229,20 @@ label {
 
 /* On a wider screen, make the label text larger and get rid of the bottom margin */
    label {
-     font-size: 1.2em;
+     font-size: 1.1em;
      margin-bottom: none;
    }
 
+
+}
+/* Fixing the dimensions of the dropdown box for "State" */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {  /*safari and chrome*/
+    select {
+        height: 50px;
+        line-height:30px;
+        background:#f4f4f4;
+        background-color: ghostwhite;
+        border: none;
+    }
 }
