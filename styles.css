@@ -1,0 +1,250 @@
+/* Sheridan Edmondson
+
+Universal Declarations
+
+*/
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+
+header,
+body {
+  font-family: 'Lato', sans-serif;
+  background: white;
+  color: #1b6bb1;
+  padding: 30px 0;
+  max-width: 768px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
+.flex-contact,
+.flex-other-topics {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-contact li,
+.flex-other-topics li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+header,
+form,
+footer {
+  min-width: 320px;
+  margin: 8px auto;
+  padding: 10px 16px;
+  background: white;
+
+
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: darkgray;
+  color: #1b6bb1;
+  margin-bottom: 1px;
+
+}
+
+/* Display a line at the bottom of the "signup name" section (at the top of the form)
+  to visually separate it from the main part of the form */
+
+h1 {
+    margin: 0 0 2px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+
+.signup-name-div h2{
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+/* draw a line at the bottom of the signup header... part of the double line */
+.signup-name-div {
+  border-bottom: 3px solid gray;
+}
+
+/* Style the lighter text */
+h3 {
+  margin: 0 30px 10px 30px;
+  text-align: center;
+  font-size: .6rem;
+  color: #96cbf9;
+}
+
+p {
+  margin: auto;
+  font-size: .8rem;
+  color:#96cbf9;
+}
+
+fieldset {
+    border: none;
+}
+
+
+.contact-information,
+.newsletter-information,
+.newsletter-format,
+.other-topics {
+    margin: 5px auto;
+    padding: 0 0.2em 0.75em;
+}
+
+/* Draw a line at the top of each of the two sections */
+.contact-information,
+.newsletter-information {
+  border-top: 2px solid darkgray;
+}
+
+
+/* Style the header text for "contact information" and "Newsletter"  */
+legend {
+  text-align: left;
+  padding-top: 1px;
+  padding-left: 2px;
+  padding-bottom: 4px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 12px 39px 12px 39px;
+  color: #1b6bb1;
+  background-color: darkgray;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+/* Style the placeholder text so that it is gray ond on the right */
+input::placeholder,
+textarea::placeholder {
+  text-align: right;
+  color: gray;
+  padding-right: 2px;
+}
+
+/* Make the input field turn lavender and shade the box outline blue
+ when the user clicks to it */
+.flex-contact li input:focus,
+.flex-contact select:focus,
+.other-topics textarea:focus {
+  background-color: lavender;
+  border: 1px solid #07889B;
+  box-shadow: inset 0 0 4px #000;
+}
+
+
+
+/* Labels */
+
+.flex-contact li label,
+.flex-other-topics li label {
+  padding: 8px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: capitalize;
+}
+
+.flex-contact li input,
+.flex-contact li textarea,
+.flex-contact li option,
+.flex-other-topics li textarea {
+  padding: 20px;
+  border: none;
+  background-color: ghostwhite;
+
+}
+
+label {
+  font-size: .9em;
+  margin-bottom: 10px;
+}
+
+#zipcode {
+  max-width: 130px;
+}
+
+
+
+/* Make the labels and text entry boxes line up neatly in columns */
+.flex-contact > li > label,
+.flex-other-topics > li > label {
+    flex: 1 0 250px;
+    max-width: 250px;
+}
+
+/* Stack the labels above the input boxes for a small screen, and next to them
+   when the screen is wider than 320px */
+.flex-contact > li > label + *,
+.flex-other-topics > li > label + * {
+  flex: 1 0 320px;
+}
+/* Put the State and Zip Code data entry boxes below the labels on smaller screens */
+
+
+
+.flex-contact state,
+.flex-contact zipcode {
+  margin-right: auto;
+}
+
+#other-topics {
+  width: 100%;
+  height: 10em;
+}
+
+
+/* Media queries */
+ @media screen and (min-width: 768px) {
+
+/* On a wider screen, make the label text larger and get rid of the bottom margin */
+   label {
+     font-size: 1.1em;
+     margin-bottom: 0px;
+   }
+
+
+}
+/* Fixing the dimensions of the dropdown box for "State" */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {  /*safari and chrome*/
+    select {
+        height: 50px;
+        line-height:30px;
+        background:#f4f4f4;
+        background-color: ghostwhite;
+        border: none;
+    }
+}
