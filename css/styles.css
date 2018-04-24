@@ -125,7 +125,7 @@ fieldset {
 
 
 /* Style the header text for "contact information" and "Newsletter"  */
-h2 {
+legend {
   text-align: left;
   padding-top: 1px;
   padding-left: 2px;
